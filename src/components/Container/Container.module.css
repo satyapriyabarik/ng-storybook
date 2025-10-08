@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    padding: 12px;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    min-height: 80px;
+}

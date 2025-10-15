@@ -1,0 +1,31 @@
+/* src/components/ui/ListGroup.module.css */
+
+.listGroup {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    background-color: #fff;
+}
+
+.listGroupItem {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #ced4da;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.listGroupItem:last-child {
+    border-bottom: none;
+}
+
+.listGroupItem:hover {
+    background-color: #f8f9fa;
+}
+
+.listGroupItemActive {
+    background-color: #0d6efd;
+    color: white;
+    font-weight: 500;
+}

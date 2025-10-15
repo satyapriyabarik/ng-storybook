@@ -1,0 +1,45 @@
+/* src/components/ui/InputGroup.module.css */
+
+.inputGroup {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.inputGroupPrepend,
+.inputGroupAppend {
+    display: flex;
+    align-items: center;
+    padding: 0 0.75rem;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.inputGroupPrepend {
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.inputGroupAppend {
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.input {
+    flex: 1 1 auto;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}

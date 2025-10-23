@@ -1,29 +1,16 @@
-/* src/components/ui/Container.module.css */
-
 .container {
     width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.sm {
-    max-width: 540px;
-}
-
-.md {
-    max-width: 720px;
-}
-
-.lg {
-    max-width: 960px;
-}
-
-.xl {
     max-width: 1140px;
+    /* default fixed container width */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .fluid {
-    max-width: 100%;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0;
 }

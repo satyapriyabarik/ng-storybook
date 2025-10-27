@@ -1,15 +1,13 @@
 import React from "react";
 
-interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-    href: string;
-    children: React.ReactNode;
-}
+const NextLinkShim = ({
+    href,
+    children,
+    ...props
+}: React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }) => (
+    <a href={href} {...props}>
+        {children}
+    </a>
+);
 
-export default function Link({ href, children, ...rest }: LinkProps) {
-    // simple stub for storybook environment
-    return (
-        <a href={href} {...rest} style={{ textDecoration: "none", color: "inherit" }}>
-            {children}
-        </a>
-    );
-}
+export default NextLinkShim;

@@ -1,18 +1,26 @@
 {
     "compilerOptions": {
+        /* ✅ modern build target */
         "target": "ESNext",
         "module": "ESNext",
-        "moduleResolution": "bundler", // ✅ avoids '.js' extension errors
+        "moduleResolution": "bundler",
+        /* ✅ React setup */
         "jsx": "react-jsx",
+        /* ✅ strict typing */
         "strict": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "skipLibCheck": true,
-        "declaration": true, // ✅ produce .d.ts files for consumers
-        "emitDeclarationOnly": false,
+        /* ✅ declarations for consumers (the key part!) */
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "declarationDir": "dist",
+        /* ✅ ensures .d.ts files go where Vite builds JS */
         "outDir": "dist",
-        "allowJs": false,
-        "noEmit": false,
+        /* ✅ Vite + TS interop */
+        "isolatedModules": true,
+        "resolveJsonModule": true,
+        /* ✅ paths and base */
         "baseUrl": ".",
         "paths": {
             "@/*": [
@@ -21,12 +29,12 @@
         }
     },
     "include": [
-        "src/**/*",
-        ".storybook/**/*",
-        "vite.config.ts"
+        "src/**/*"
     ],
     "exclude": [
         "node_modules",
-        "dist"
+        "dist",
+        ".storybook",
+        "vite.config.ts"
     ]
 }

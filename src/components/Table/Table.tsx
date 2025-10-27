@@ -51,3 +51,4 @@ export const Table: React.FC<TableProps> = ({
         </Wrapper>
     );
 };
+export default Table;

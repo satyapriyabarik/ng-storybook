@@ -67,3 +67,4 @@ export const Col: React.FC<ColProps> = ({ children, className = "", xs, sm, md, 
     );
 };
 Col.displayName = "Grid.Col";
+export default { Container, Row, Col };

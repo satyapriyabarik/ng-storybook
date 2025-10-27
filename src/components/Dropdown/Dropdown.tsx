@@ -169,3 +169,5 @@ Dropdown.Toggle = DropdownToggle;
 Dropdown.Menu = DropdownMenu;
 Dropdown.Item = DropdownItem;
 Dropdown.Divider = DropdownDivider;
+
+export default Dropdown;

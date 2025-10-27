@@ -102,3 +102,4 @@ Carousel.Caption = ({ children, className = "", ...props }: CarouselCaptionProps
     );
 };
 Carousel.Caption.displayName = "Carousel.Caption"; // ✅ Add display name
+export default Carousel;

@@ -69,3 +69,4 @@ export const Alert: React.FC<AlertProps> = ({
         </div>
     );
 };
+export default Alert;

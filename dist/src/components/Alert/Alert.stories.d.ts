@@ -1,0 +1,10 @@
+import type { Meta, StoryObj } from "@storybook/react";
+import { Alert } from "./Alert";
+declare const meta: Meta<typeof Alert>;
+export default meta;
+type Story = StoryObj<typeof Alert>;
+export declare const Variants: Story;
+export declare const WithHeadings: Story;
+export declare const Dismissible: Story;
+export declare const ControlledDismissal: Story;
+export declare const Showcase: Story;

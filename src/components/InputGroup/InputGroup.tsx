@@ -89,3 +89,4 @@ InputGroup.Button = ({ children, className = "", ...props }) => {
     );
 };
 InputGroup.Button.displayName = "InputGroup.Button";
+export default InputGroup;

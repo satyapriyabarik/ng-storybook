@@ -47,3 +47,4 @@ export const Spinner: React.FC<SpinnerProps> = ({
         </Component>
     );
 };
+export default Spinner;

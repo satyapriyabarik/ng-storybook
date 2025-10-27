@@ -96,3 +96,4 @@ Form.Control = ({ as = "input", className = "", ...props }: FormControlProps) =>
     }
 };
 Form.Control.displayName = "Form.Control";
+export default Form;

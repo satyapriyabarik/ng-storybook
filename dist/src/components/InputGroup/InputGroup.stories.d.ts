@@ -1,0 +1,11 @@
+import type { Meta, StoryObj } from "@storybook/react";
+import { InputGroup } from "./InputGroup";
+declare const meta: Meta<typeof InputGroup>;
+export default meta;
+type Story = StoryObj<typeof InputGroup>;
+export declare const Basic: Story;
+export declare const WithAppend: Story;
+export declare const WithButton: Story;
+export declare const PrependAndAppend: Story;
+export declare const Sizes: Story;
+export declare const SearchWithIcon: Story;

@@ -112,3 +112,4 @@ ListGroup.Item = ({
 };
 
 ListGroup.Item.displayName = "ListGroup.Item";
+export default ListGroup;

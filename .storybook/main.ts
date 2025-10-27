@@ -3,7 +3,7 @@ import { mergeConfig } from "vite";
 import svgr from "vite-plugin-svgr";
 import path from "path";
 const config: StorybookConfig = {
-  stories: ["../src/**/*.stories.@(js|jsx|ts|tsx|mdx)", "../src/**/*.mdx"],
+  stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: ["@storybook/addon-docs"],
   framework: {
     name: "@storybook/react-vite",

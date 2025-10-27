@@ -1,15 +1,18 @@
 {
     "compilerOptions": {
         "target": "ESNext",
-        "module": "NodeNext",
-        "moduleResolution": "NodeNext",
+        "module": "ESNext",
+        "moduleResolution": "bundler", // ✅ avoids '.js' extension errors
         "jsx": "react-jsx",
         "strict": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "skipLibCheck": true,
-        "allowJs": true,
-        "noEmit": true, // ✅ important
+        "declaration": true, // ✅ produce .d.ts files for consumers
+        "emitDeclarationOnly": false,
+        "outDir": "dist",
+        "allowJs": false,
+        "noEmit": false,
         "baseUrl": ".",
         "paths": {
             "@/*": [
@@ -20,7 +23,7 @@
     "include": [
         "src/**/*",
         ".storybook/**/*",
-        "vite.config.js"
+        "vite.config.ts"
     ],
     "exclude": [
         "node_modules",

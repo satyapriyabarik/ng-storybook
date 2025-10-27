@@ -1,0 +1,10 @@
+import type { Meta, StoryObj } from "@storybook/react";
+import { Form } from "./Form";
+declare const meta: Meta<typeof Form>;
+export default meta;
+type Story = StoryObj<typeof Form>;
+export declare const Basic: Story;
+export declare const Inputs: Story;
+export declare const TextAreas: Story;
+export declare const Selects: Story;
+export declare const ControlVariants: Story;

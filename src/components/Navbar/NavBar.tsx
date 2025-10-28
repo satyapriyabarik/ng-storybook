@@ -92,6 +92,7 @@ export const NavBar: React.FC<NavBarProps> & {
         );
     };
 NavBar.displayName = "NavBar";
+export default NavBar;
 
 // ---------------------- Brand ----------------------
 const Brand: React.FC<BrandProps> = ({ href = "/", children }) => (
@@ -150,4 +151,3 @@ NavBar.Toggle = Toggle;
 NavBar.Collapse = Collapse;
 NavBar.Nav = Nav;
 
-export default NavBar;

@@ -12,6 +12,7 @@ export default defineConfig({
             "next/link": path.resolve(__dirname, "src/shims/nextLink.tsx"),
             "@/lib/api": path.resolve(__dirname, "src/mocks/api.ts"),
         },
+        preserveSymlinks: true,
     },
     build: {
         cssCodeSplit: false,

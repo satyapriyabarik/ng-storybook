@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import ProductGrid from "./ProductGrid";
-import type { Product } from "@/mocks/types/Product";
 import { sampleProducts } from "@/mocks/api";
 
 const meta: Meta<typeof ProductGrid> = {

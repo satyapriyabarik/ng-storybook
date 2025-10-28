@@ -25,11 +25,21 @@
         "paths": {
             "@/*": [
                 "src/*"
+            ],
+            "next/image": [
+                "src/shims/nextImage.tsx"
+            ],
+            "next/link": [
+                "src/shims/nextLink.tsx"
             ]
         }
     },
+    "types": [
+        "node"
+    ],
     "include": [
-        "src/**/*"
+        "src/**/*",
+        "src/types/**/*"
     ],
     "exclude": [
         "node_modules",

@@ -1,3 +1,7 @@
 import React from "react";
-declare const NextImageShim: ({ src, alt, width, height, ...props }: React.ImgHTMLAttributes<HTMLImageElement>) => import("react/jsx-runtime").JSX.Element;
+interface NextImageShimProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+    /** Mimics Next.js <Image fill /> behavior */
+    fill?: boolean;
+}
+declare const NextImageShim: React.FC<NextImageShimProps>;
 export default NextImageShim;

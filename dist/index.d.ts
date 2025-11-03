@@ -16,3 +16,4 @@ export * from './components/Carousel';
 export * from "./components/ProductGrid";
 export * from "./components/Rating";
 export * from "./components/SearchSortBar";
+export * from "./components/SearchBox";

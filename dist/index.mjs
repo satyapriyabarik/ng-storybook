@@ -1288,9 +1288,10 @@ const Qs = "_productCard_2309b_1", Ks = {
 function _r({
   products: e,
   isLoading: t = !1,
-  skeletonCount: n = 8
+  skeletonCount: n = 8,
+  renderAddToCart: r
 }) {
-  return !e.length && !t ? /* @__PURE__ */ s.jsx("p", { className: "text-center text-muted", children: "No products found." }) : /* @__PURE__ */ s.jsx(ce, { className: "g-4 justify-content-center", children: t ? Array.from({ length: n }).map((r, a) => /* @__PURE__ */ s.jsx(
+  return !e.length && !t ? /* @__PURE__ */ s.jsx("p", { className: "text-center text-muted", children: "No products found." }) : /* @__PURE__ */ s.jsx(ce, { className: "g-4 justify-content-center", children: t ? Array.from({ length: n }).map((a, l) => /* @__PURE__ */ s.jsx(
     V,
     {
       xs: 12,
@@ -1300,41 +1301,16 @@ function _r({
       xl: 3,
       className: "product-col mb-4",
       children: /* @__PURE__ */ s.jsxs("div", { className: N.skeletonCard, children: [
-        /* @__PURE__ */ s.jsx(
-          "div",
-          {
-            className: `${N.skeleton} ${N.skeletonImgSm}`
-          }
-        ),
-        /* @__PURE__ */ s.jsx(
-          "div",
-          {
-            className: `${N.skeleton} ${N.skeletonTitleSm}`
-          }
-        ),
-        /* @__PURE__ */ s.jsx(
-          "div",
-          {
-            className: `${N.skeleton} ${N.skeletonTextSm}`
-          }
-        ),
-        /* @__PURE__ */ s.jsx(
-          "div",
-          {
-            className: `${N.skeleton} ${N.skeletonPriceSm}`
-          }
-        ),
-        /* @__PURE__ */ s.jsx(
-          "div",
-          {
-            className: `${N.skeleton} ${N.skeletonBtnSm}`
-          }
-        )
+        /* @__PURE__ */ s.jsx("div", { className: `${N.skeleton} ${N.skeletonImgSm}` }),
+        /* @__PURE__ */ s.jsx("div", { className: `${N.skeleton} ${N.skeletonTitleSm}` }),
+        /* @__PURE__ */ s.jsx("div", { className: `${N.skeleton} ${N.skeletonTextSm}` }),
+        /* @__PURE__ */ s.jsx("div", { className: `${N.skeleton} ${N.skeletonPriceSm}` }),
+        /* @__PURE__ */ s.jsx("div", { className: `${N.skeleton} ${N.skeletonBtnSm}` })
       ] })
     },
-    `skeleton-${a}`
-  )) : e.map((r, a) => {
-    var l;
+    `skeleton-${l}`
+  )) : e.map((a, l) => {
+    var d;
     return /* @__PURE__ */ s.jsx(
       V,
       {
@@ -1344,41 +1320,40 @@ function _r({
         lg: 3,
         xl: 3,
         className: `product-col mb-4 ${N.fadeIn}`,
-        style: { animationDelay: `${a * 0.05}s` },
-        children: /* @__PURE__ */ s.jsxs(G, { className: `h-100 shadow-lg border-1 hover-zoom ${Ks.productCard}`, children: [
-          /* @__PURE__ */ s.jsx(ve, { href: `/productDetails/${r.id}`, children: /* @__PURE__ */ s.jsx(
-            G.Img,
-            {
-              variant: "top",
-              src: r.image,
-              alt: r.name,
-              className: "p-2 rounded",
-              fill: !0
-            }
-          ) }),
-          /* @__PURE__ */ s.jsxs(G.Body, { className: "text-center", children: [
-            /* @__PURE__ */ s.jsx(G.Title, { className: "fs-5 text-dark", children: r.name }),
-            /* @__PURE__ */ s.jsx(G.Text, { className: "text-muted small mb-1", children: r.category }),
-            /* @__PURE__ */ s.jsxs(G.Text, { className: "fw-bold text-success fs-6 mb-2", children: [
-              "₹",
-              r.price ?? "—"
-            ] }),
-            /* @__PURE__ */ s.jsx("div", { style: { paddingLeft: "30%" }, children: /* @__PURE__ */ s.jsx(
-              Zs,
-              {
-                rating: ((l = r.reviews[0]) == null ? void 0 : l.rating) ?? 0,
-                max: 5
-              }
-            ) })
-          ] }),
-          /* @__PURE__ */ s.jsx(G.Footer, { className: "bg-white border-0 text-center", children: /* @__PURE__ */ s.jsxs(Be, { variant: "success", size: "sm", children: [
-            " ",
-            /* @__PURE__ */ s.jsx(Vs, {}),
-            "Add to Cart"
-          ] }) })
-        ] })
+        style: { animationDelay: `${l * 0.05}s` },
+        children: /* @__PURE__ */ s.jsxs(
+          G,
+          {
+            className: `h-100 shadow-lg border-1 hover-zoom ${Ks.productCard}`,
+            children: [
+              /* @__PURE__ */ s.jsx(ve, { href: `/productDetails/${a.id}`, children: /* @__PURE__ */ s.jsx(
+                G.Img,
+                {
+                  variant: "top",
+                  src: a.image,
+                  alt: a.name,
+                  className: "p-2 rounded",
+                  fill: !0
+                }
+              ) }),
+              /* @__PURE__ */ s.jsxs(G.Body, { className: "text-center", children: [
+                /* @__PURE__ */ s.jsx(G.Title, { className: "fs-5 text-dark", children: a.name }),
+                /* @__PURE__ */ s.jsx(G.Text, { className: "text-muted small mb-1", children: a.category }),
+                /* @__PURE__ */ s.jsxs(G.Text, { className: "fw-bold text-success fs-6 mb-2", children: [
+                  "₹",
+                  a.price ?? "—"
+                ] }),
+                /* @__PURE__ */ s.jsx("div", { style: { paddingLeft: "30%" }, children: /* @__PURE__ */ s.jsx(Zs, { rating: ((d = a.reviews[0]) == null ? void 0 : d.rating) ?? 0, max: 5 }) })
+              ] }),
+              /* @__PURE__ */ s.jsx(G.Footer, { className: "bg-white border-0 text-center", children: r ? r(a) : /* @__PURE__ */ s.jsxs(Be, { variant: "success", size: "sm", children: [
+                /* @__PURE__ */ s.jsx(Vs, { className: "me-2" }),
+                " Add to Cart"
+              ] }) })
+            ]
+          }
+        )
       },
-      r.id
+      a.id
     );
   }) });
 }

@@ -1,43 +1,39 @@
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import ProductGrid from "./ProductGrid";
 import { sampleProducts } from "@/mocks/api";
+import AddToCartButton from "@/components/addToCart/AddToCartButton";
 
+// ---------------------- Meta Configuration ----------------------
 const meta: Meta<typeof ProductGrid> = {
-    title: "Organisms/ProductGrid",
+    title: "Molecules/ProductGrid",
     component: ProductGrid,
     tags: ["autodocs"],
     parameters: {
-        layout: "padded", // better spacing
+        layout: "fullscreen",
     },
 };
 
 export default meta;
 type Story = StoryObj<typeof ProductGrid>;
 
-// ✅ Mock Data
-
-
-// ✅ Default Story
+// ---------------------- Default Story ----------------------
 export const Default: Story = {
     args: {
         products: sampleProducts,
-        isLoading: false,
+        renderAddToCart: (product) => (
+            <AddToCartButton product={product} />
+        ),
     },
 };
 
-// ✅ Loading Skeleton Story
-export const Loading: Story = {
-    args: {
-        products: [],
-        isLoading: true,
-        skeletonCount: 6,
-    },
-};
+// ---------------------- With Custom Button Component ----------------------
+// Example if you have a reusable AddToCartButton component
+// export const WithCustomButton: Story = {
+//   args: {
+//     products: mockProducts,
+//     renderAddToCart: (product) => <AddToCartButton product={product} />,
+//   },
+// };
 
-// ✅ Empty List Story
-export const Empty: Story = {
-    args: {
-        products: [],
-        isLoading: false,
-    },
-};
+// -----------
